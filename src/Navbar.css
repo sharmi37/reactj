@@ -1,0 +1,18 @@
+.nav {
+  background: #0F2027;
+  text-align: center;
+  padding: 15px;
+}
+
+.nav-link {
+  color: white;
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: yellow;
+  border-bottom: 2px solid yellow;
+}
