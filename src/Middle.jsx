@@ -27,14 +27,18 @@ function Middle() {
   return (
     <div className="Middle1">
 
-      {/* Video Section */}
+      {/* Video Section — unchanged */}
       <div className="Middle2">
         <video width="100%" autoPlay muted loop controls>
           <source src={myVideo} type="video/mp4"/>
         </video>
       </div>
 
-      {/* Product Section */}
+      {/* Collection heading */}
+      <p className="collection-label">New Arrivals</p>
+      <h2 className="collection-title">Our <span>Collection</span></h2>
+
+      {/* Product Section — unchanged */}
       <div className="Middle">
         <Product data={pname1}/>
         <Product data={pname2}/>
