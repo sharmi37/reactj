@@ -1,40 +1,108 @@
-*{
-    margin:0;
-    padding:0;
-   
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.Middle1{
-    margin-top: -19px;
-    width:100%;
-    height:100vh;
-    overflow-y: auto;
-       /* Enable vertical scroll */
+/* ── Outer wrapper — scroll works here ── */
+.Middle1 {
+  margin-top: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: visible;
+  background: #0a0a0f;
 }
 
-/* Video container */
-.Middle2{
-    width:100%;
-    height:90vh;
-    overflow:hidden;
+/* ── Video container ── */
+.Middle2 {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  position: relative;
 }
 
-.Middle2 video{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+.Middle2 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-/* Product container */
-.Middle{
-    background:white;
-    width:100%;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:space-around;
-    align-items:center;
-    gap:20px;
-    padding:20px;
-    margin-bottom: 90px;
-  
+/* Fade from video into cards */
+.Middle2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  background: linear-gradient(to bottom, transparent, #0a0a0f);
+  pointer-events: none;
+}
+
+/* ── Section label above cards ── */
+.collection-label {
+  text-align: center;
+  padding: 48px 20px 8px;
+  font-size: 11px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: rgba(212, 168, 67, 0.65);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.collection-title {
+  text-align: center;
+  padding: 4px 20px 36px;
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #f5f2ee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.collection-title span {
+  color: #d4a843;
+}
+
+/* ── Product grid ── */
+.Middle {
+  background-color: #0f1624;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(212, 168, 67, 0.03) 0px,
+      rgba(212, 168, 67, 0.03) 1px,
+      transparent 1px,
+      transparent 70px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(212, 168, 67, 0.03) 0px,
+      rgba(212, 168, 67, 0.03) 1px,
+      transparent 1px,
+      transparent 70px
+    );
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 20px 24px 80px;
+  border-top: 1px solid rgba(212, 168, 67, 0.12);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .Middle2 {
+    height: 55vw;
+    min-height: 240px;
+  }
+  .Middle {
+    padding: 16px 12px 60px;
+    gap: 16px;
+    justify-content: center;
+  }
 }
