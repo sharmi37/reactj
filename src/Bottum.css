@@ -1,14 +1,123 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ── Footer wrapper ── */
 .bottum1 {
   width: 100%;
-  background-color: blue;
+  background: #0a0a0f;
+  border-top: 1px solid rgba(212, 168, 67, 0.2);
+  padding: 0;
+}
+
+/* ── Top footer bar ── */
+.bottum-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 48px 6%;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.bottum-brand {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #d4a843;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 10px;
+}
+
+.bottum-about {
+  font-size: 13px;
+  color: #9a9690;
+  line-height: 1.8;
+  max-width: 260px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bottum-col h4 {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #f5f2ee;
+  margin-bottom: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bottum-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.bottum-col ul li {
+  font-size: 13px;
+  color: #9a9690;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  transition: color 0.2s, padding-left 0.2s;
+}
+
+.bottum-col ul li:hover {
+  color: #d4a843;
+  padding-left: 4px;
+}
+
+/* ── Bottom bar ── */
+.bottum-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 6%;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.bottum-copy {
+  font-size: 13px;
+  color: #6b6762;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bottum-socials {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(212,168,67,0.15);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px 0;
+  font-size: 15px;
+  cursor: pointer;
+  transition: border-color 0.3s, background 0.3s;
 }
 
-.bottum1 h3 {
-  margin: 0;
-  color: white;
-  font-weight: 500;
+.social-icon:hover {
+  border-color: #d4a843;
+  background: rgba(212,168,67,0.1);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .bottum-main {
+    flex-direction: column;
+    gap: 28px;
+    padding: 36px 5%;
+  }
+  .bottum-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
 }
