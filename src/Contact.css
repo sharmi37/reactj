@@ -1,103 +1,207 @@
-*{
-    margin:0;
-    box-sizing:border-box;
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.contact{
-    width:100vw;
-    height: 100vh;
-    background-image: radial-gradient( circle 476px at 54.8% 51.5%,  rgba(168,229,253,1) 0%, rgba(244,244,254,1) 42.3%, rgba(244,244,254,1) 100.2% );
-    text-align:center;
-    padding:30px;
-    overflow-y:auto;
-    
-}
-.contact h1{
-    margin-bottom: 30px;
-    color: #69144d;  /* fallback for old browsers */
-
+.contact {
+  width: 100%;
+  min-height: 100vh;          /* min-height, not fixed height — allows scroll */
+  background: linear-gradient(135deg, #0a0a0f 0%, #0f1624 50%, #0a0f1e 100%);
+  text-align: center;
+  padding: 40px 5%;
+  overflow-y: auto;
 }
 
-.row{
-    display:flex;
-    margin-top:20px;
-   
-}
-.space1{
-    margin-right:40px;
-    width:50vw;
-    height:70vh;
-    border-radius:20px;
-    box-shadow:0 0 10px rgba(0,0,0,0.2);
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+.contact h1 {
+  margin-bottom: 10px;
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #f5f2ee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.space1:hover{
-    transform: scale(1.05);
-    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+/* Gold underline under heading */
+.contact h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #d4a843;
+  margin: 10px auto 0;
+  border-radius: 2px;
 }
 
-
-.space1 img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    border-radius: 20px;
-    
+.contact-subtitle {
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(212, 168, 67, 0.7);
+  margin-bottom: 36px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.space2{
-    width:50vw;
-    background-color:transparent;
-    box-shadow:0 0 15px rgba(0, 0, 0, 0.2);
-    height:70vh;
-    border-radius:20px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+/* ── Info strip ── */
+.contact-info-strip {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
 }
 
-.space2:hover{
-    transform: translateY(-10px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(212,168,67,0.15);
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 13px;
+  color: #c8c4bc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.contactForm{
-    width:70%;
-    display:flex;
-    flex-direction:column;
+.contact-info-item span.icon {
+  font-size: 18px;
 }
 
-.contactForm label{
-    text-align:left;
-    margin-top:10px;
-    font-weight:bold;
+/* ── Row layout ── */
+.row {
+  display: flex;
+  gap: 28px;
+  align-items: stretch;
+  text-align: left;
+}
+
+/* ── Left image panel ── */
+.space1 {
+  flex: 1;
+  min-height: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  border: 1px solid rgba(212,168,67,0.12);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.space1:hover {
+  transform: scale(1.02);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+}
+
+.space1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Right form panel ── */
+.space2 {
+  flex: 1;
+  background: rgba(18, 21, 30, 0.9);
+  border: 1px solid rgba(212,168,67,0.18);
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+  min-height: 420px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  padding: 30px 20px;
+}
+
+.space2:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.5);
+}
+
+/* ── Form ── */
+.contactForm {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactForm label {
+  text-align: left;
+  margin-top: 14px;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #d4a843;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .contactForm input,
-.contactForm textarea{
-    padding:10px;
-    margin-top:5px;
-    border-radius:6px;
-    border:1px solid gray;
+.contactForm textarea {
+  padding: 12px 14px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid rgba(212,168,67,0.2);
+  background: rgba(255,255,255,0.05);
+  color: #f5f2ee;
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  outline: none;
+  transition: border-color 0.3s, background 0.3s;
 }
 
-.contactForm textarea{
-    height:100px;
-    resize:none;
+.contactForm input:focus,
+.contactForm textarea:focus {
+  border-color: #d4a843;
+  background: rgba(212,168,67,0.06);
 }
 
-.contactForm button{
-    margin-top:15px;
-    padding:10px;
-    border:none;
-    background-color:#007bff;
-    color:white;
-    border-radius:6px;
-    cursor:pointer;
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+  color: rgba(200,196,188,0.5);
 }
 
-.contactForm button:hover{
-    background-color:#0056b3;
+.contactForm textarea {
+  height: 110px;
+  resize: none;
+}
+
+.contactForm button {
+  margin-top: 18px;
+  padding: 13px;
+  border: none;
+  background: linear-gradient(to right, #DC2424, #4A569D);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: opacity 0.3s, transform 0.2s;
+}
+
+.contactForm button:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+  .space1, .space2 {
+    min-height: 280px;
+    width: 100%;
+  }
+  .contactForm {
+    width: 90%;
+  }
+  .contact-info-strip {
+    flex-direction: column;
+    align-items: center;
+  }
 }
