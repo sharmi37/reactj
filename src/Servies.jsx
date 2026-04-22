@@ -1,6 +1,6 @@
 import React from "react";
 import "./Servies.css";
-import serviesv from "./imagess/serviesv1.mp4";
+import serviesv from "./imagess/serviesv1.jpg";
 
 const SERVICE_CARDS = [
   { icon: "🔧", name: "Full Service & Maintenance", desc: "Comprehensive maintenance from oil changes to engine overhaul. Certified mechanics, genuine parts, 1-year warranty." },
