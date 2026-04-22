@@ -6,6 +6,27 @@ function Contact() {
   return (
     <div className='contact'>
       <h1>CONTACT</h1>
+      <p className="contact-subtitle">Get in touch with us</p>
+
+      {/* Info strip */}
+      <div className="contact-info-strip">
+        <div className="contact-info-item">
+          <span className="icon">📍</span>
+          <span>No.42 Car Street, Anna Nagar, Trichy – 620018</span>
+        </div>
+        <div className="contact-info-item">
+          <span className="icon">📞</span>
+          <span>+91 98765 43210</span>
+        </div>
+        <div className="contact-info-item">
+          <span className="icon">🕐</span>
+          <span>Mon – Sat &nbsp;|&nbsp; 9 AM – 7 PM</span>
+        </div>
+        <div className="contact-info-item">
+          <span className="icon">✉️</span>
+          <span>saran@carssite.com</span>
+        </div>
+      </div>
 
       <div className='row'>
 
