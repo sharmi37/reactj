@@ -1,18 +1,70 @@
 .nav {
-  background: #0F2027;
+  background: rgba(10, 10, 15, 0.97);
+  backdrop-filter: blur(12px);
   text-align: center;
-  padding: 15px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid rgba(212, 168, 67, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  flex-wrap: wrap;
+  min-height: 52px;
 }
 
 .nav-link {
-  color: white;
-  margin-right: 20px;
+  color: #c8c4bc;
+  margin: 0;
+  padding: 14px 20px;
   text-decoration: none;
-  font-size: 18px;
-  transition: 0.3s;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: color 0.3s, border-bottom 0.3s;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background: #d4a843;
+  transform: scaleX(0);
+  transition: transform 0.3s;
 }
 
 .nav-link:hover {
-  color: yellow;
-  border-bottom: 2px solid yellow;
+  color: #d4a843;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Active link via React Router */
+.nav-link.active {
+  color: #d4a843;
+}
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding: 6px 10px;
+    gap: 0;
+  }
+  .nav-link {
+    padding: 10px 12px;
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
 }
