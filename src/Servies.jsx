@@ -3,12 +3,12 @@ import "./Servies.css";
 import serviesv from "./imagess/serviesv1.jpg";
 
 const SERVICE_CARDS = [
-  { icon: "🔧", name: "Full Service & Maintenance", desc: "Comprehensive maintenance from oil changes to engine overhaul. Certified mechanics, genuine parts, 1-year warranty." },
-  { icon: "🎨", name: "Paint & Body Work", desc: "Paint correction, ceramic coating, dent removal, and full body restoration. Showroom finish guaranteed." },
-  { icon: "⚡", name: "Electrical & Diagnostics", desc: "Advanced diagnostics, ECU tuning, wiring repairs, and EV battery servicing with state-of-the-art equipment." },
-  { icon: "🛞", name: "Tyres & Alignment", desc: "All major tyre brands, wheel alignment, balancing, and nitrogen inflation. On-site emergency repairs." },
-  { icon: "🧊", name: "AC & Climate Systems", desc: "AC regas, compressor replacement, cabin filter cleaning, and full climate control calibration." },
-  { icon: "🛡️", name: "Insurance & Warranty", desc: "Insurance claims assistance, extended warranty packages, and roadside assistance coverage." },
+  { icon: "", name: "Full Service & Maintenance", desc: "Comprehensive maintenance from oil changes to engine overhaul. Certified mechanics, genuine parts, 1-year warranty." },
+  { icon: "", name: "Paint & Body Work", desc: "Paint correction, ceramic coating, dent removal, and full body restoration. Showroom finish guaranteed." },
+  { icon: "", name: "Electrical & Diagnostics", desc: "Advanced diagnostics, ECU tuning, wiring repairs, and EV battery servicing with state-of-the-art equipment." },
+  { icon: "", name: "Tyres & Alignment", desc: "All major tyre brands, wheel alignment, balancing, and nitrogen inflation. On-site emergency repairs." },
+  { icon: "", name: "AC & Climate Systems", desc: "AC regas, compressor replacement, cabin filter cleaning, and full climate control calibration." },
+  { icon: "", name: "Insurance & Warranty", desc: "Insurance claims assistance, extended warranty packages, and roadside assistance coverage." },
 ];
 
 const PRICING = [
